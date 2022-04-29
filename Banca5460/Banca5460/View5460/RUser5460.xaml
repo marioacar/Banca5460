@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct ="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:Model="clr-namespace:Banca5460.Model5460"
+             xmlns:Vm="clr-namespace:Banca5460.ViewModel5460"
+             x:Class="Banca5460.View5460.RUser5460"
+             x:DataType="Vm:RegisterViewModel5460"
+             x:Name="ThisMPaige"
+             Title="Resgistro">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+            <ScrollView Grid.Row="0" BackgroundColor="LightGray" Orientation="Horizontal">
+                <StackLayout VerticalOptions="CenterAndExpand">
+                    <Label HorizontalTextAlignment="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Nuevo Usuario" TextColor="Black" FontSize="Large"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
+            </ScrollView>
+
+            <ScrollView Grid.Row="1" BackgroundColor="LightGray">
+                <StackLayout Margin="10" VerticalOptions="StartAndExpand">
+                    <Entry 
+                        x:Name="Name"
+                        Text="{Binding NameText, Mode=TwoWay}"
+                        Placeholder="Nombre de usuario">
+                        <Entry.Behaviors>
+                            <xct:EventToCommandBehavior
+                                EventName="TextChange"
+                                Command="{Binding cmdINameValidation}"/>
+                        </Entry.Behaviors>
+                    </Entry>
+                    <Entry 
+                        x:Name="FLastname"
+                        Text="{Binding FLastNameText, Mode=TwoWay}"
+                        Placeholder="Apellido Paterno">
+                        <Entry.Behaviors>
+                            <xct:EventToCommandBehavior
+                                EventName="TextChange"
+                                Command="{Binding cmdIFLastNameValidation}"/>
+                        </Entry.Behaviors>
+                    </Entry>
+                    <Entry 
+                        x:Name="MLastname"
+                        Text="{Binding MLastNameText, Mode=TwoWay}"
+                        Placeholder="Apellido Materno">
+                        <Entry.Behaviors>
+                            <xct:EventToCommandBehavior
+                                EventName="TextChange"
+                                Command="{Binding cmdIMLastNameValidation}"/>
+                        </Entry.Behaviors>
+                    </Entry>
+                    <Entry 
+                        x:Name="Phone"
+                        Text="{Binding PhoneNumb, Mode=TwoWay}"
+                        Placeholder="Numero Telefónico">
+                        <Entry.Behaviors>
+                            <xct:EventToCommandBehavior
+                                EventName="TextChange"
+                                Command="{Binding NameTextValidations}"/>
+                        </Entry.Behaviors>
+                    </Entry>
+                    <Button Text="Crear nuevo usuario" BackgroundColor="Gray"></Button>
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

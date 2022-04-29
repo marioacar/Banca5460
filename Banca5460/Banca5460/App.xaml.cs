@@ -11,7 +11,7 @@ namespace Banca5460
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new Principal5460());
+            MainPage = new NavigationPage(new RUser5460());
         }
 
         protected override void OnStart()

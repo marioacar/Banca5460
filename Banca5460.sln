@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banca5460.Android", "Banca5
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banca5460.iOS", "Banca5460\Banca5460.iOS\Banca5460.iOS.csproj", "{55DA1026-AF22-468D-9C29-4FB0F8CB86CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banca5460", "Banca5460\Banca5460\Banca5460.csproj", "{B9DB7C0E-E3A1-4656-9860-25D5CBF93442}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Banca5460", "Banca5460\Banca5460\Banca5460.csproj", "{B9DB7C0E-E3A1-4656-9860-25D5CBF93442}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

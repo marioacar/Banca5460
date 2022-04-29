@@ -10,12 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace Banca5460.View5460
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Principal5460 : ContentPage
+    public partial class TList5460 : ContentPage
     {
-        public Principal5460()
+        public TList5460()
         {
             InitializeComponent();
-            
         }
     }
 }
